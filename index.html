@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todos</title>
+  </head>
+  <body>
+    <form onsubmit="return addTodo(event)">
+      <input
+        id="todoInput"
+        type="text"
+        placeholder="What do you want to do ?"
+      />
+      <button type="submit">Add</button>
+    </form>
+    <div>
+      <ul id="todos"></ul>
+    </div>
+  </body>
+  <script src="./script.js"></script>
+</html>
+
+<style>
+  #todos {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  #todos > li {
+    cursor: pointer;
+  }
+
+  .checked {
+    text-decoration: line-through;
+  }
+</style>
